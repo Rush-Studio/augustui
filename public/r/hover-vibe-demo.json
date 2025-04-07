@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-vibe-demo",
+  "type": "registry:example",
+  "title": "Hover Vibe Demo",
+  "description": "Example showing a hover vibe component that displays a list of text.",
+  "registryDependencies": [
+    "https://augustui.com/r/hover-vibe"
+  ],
+  "files": [
+    {
+      "path": "registry/example/hover-vibe-demo.tsx",
+      "content": "import HoverVibe from \"../augustui/hover-vibe\";\n\nexport default function HoverVibeDemo() {\n  return <HoverVibe />;\n}\n",
+      "type": "registry:example",
+      "target": "components/hover-vibe-demo.tsx"
+    }
+  ]
+}

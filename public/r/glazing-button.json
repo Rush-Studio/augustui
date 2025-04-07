@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glazing-button",
+  "type": "registry:ui",
+  "title": "Glazing Button",
+  "description": "A glazing button component that glazes the button.",
+  "dependencies": [
+    "react"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/glazing-button.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface GlazingButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  children: React.ReactNode;\n  className?: string;\n}\n\nexport default function GlazingButton({\n  children,\n  className,\n}: GlazingButtonProps) {\n  return (\n    <button\n      className={cn(\n        \"group relative flex items-center justify-center overflow-hidden rounded-lg bg-primary px-6 py-3 text-primary-foreground\",\n        className,\n      )}\n    >\n      <span className=\"relative z-10\">{children}</span>\n      <span\n        className=\"absolute -left-1/2 -top-1/2 size-[200%] rotate-[30deg] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 \n                transition-transform duration-500 group-hover:translate-x-full group-hover:opacity-100 dark:via-black/30\"\n      ></span>\n    </button>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/glazing-button.tsx"
+    }
+  ]
+}

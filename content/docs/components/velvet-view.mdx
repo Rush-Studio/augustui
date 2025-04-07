@@ -1,0 +1,60 @@
+---
+title: Velvet View
+date: 2024-05-21
+description: A carousel with character.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="velvet-view-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/velvet-view"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="velvet-view" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop     | Type          | Default | Description                    |
+| -------- | ------------- | ------- | ------------------------------ |
+| `slides` | `SlideItem[]` | `[]`    | Array of text lines to display |
+
+### SlideItem
+
+| Prop        | Type     | Default | Description                  |
+| ----------- | -------- | ------- | ---------------------------- |
+| `imageSrc`  | `string` | `""`    | Source URL of the image      |
+| `imageText` | `string` | `""`    | Text to display in the image |

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-decoder-demo",
+  "type": "registry:example",
+  "title": "Letter Decoder Demo",
+  "description": "Example showing a letter decoder component that decodes text as it's typed.",
+  "registryDependencies": [
+    "https://augustui.com/r/letter-decoder"
+  ],
+  "files": [
+    {
+      "path": "registry/example/letter-decoder-demo.tsx",
+      "content": "import { LetterDecoder } from \"../augustui/letter-decoder\";\n\nexport default function LetterDecoderDemo() {\n  return (\n    <LetterDecoder\n      text=\"Try to decode this, bet you can't\"\n      triggerOnHover={true}\n      triggerOnMount={true}\n      scrambleSpeed={50}\n      decodeTime={800}\n    />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/letter-decoder-demo.tsx"
+    }
+  ]
+}

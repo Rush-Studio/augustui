@@ -1,0 +1,48 @@
+---
+title: Swipe Flicker
+date: 2024-05-21
+description: Swipe through moments.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="swipe-flicker-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/swipe-flicker"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="swipe-flicker" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type       | Default           | Description                                |
+| ----------- | ---------- | ----------------- | ------------------------------------------ |
+| `images`    | `string[]` | `array of images` | Array of image URLs to display             |
+| `className` | `string`   | `""`              | Additional CSS class names for the wrapper |

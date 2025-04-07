@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scramble-appear",
+  "type": "registry:ui",
+  "title": "Scramble Appear",
+  "description": "A dynamic text effect that scrambles and blinks each letter into place for the added intrigue and elegance.",
+  "dependencies": [
+    "motion",
+    "react"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/scramble-appear.tsx",
+      "content": "\"use client\";\nimport { cn } from \"@/lib/utils\";\nimport { useEffect, useState } from \"react\";\n\ninterface ScrambleAppearProps {\n  text: string;\n  delayBetweenLetters?: number;\n  className?: string;\n}\n\nexport default function ScrambleAppear({\n  text = \"Hello, world!\",\n  delayBetweenLetters = 30,\n  className = \"\",\n}: ScrambleAppearProps) {\n  const [visibleIndices, setVisibleIndices] = useState<Set<number>>(new Set());\n  const [repetitions, setRepetitions] = useState(1);\n  const [isReady, setIsReady] = useState(false);\n\n  useEffect(() => {\n    const updateRepetitions = () => {\n      const container = document.querySelector(\".scramble-container\");\n      if (container) {\n        const { width, height } = container.getBoundingClientRect();\n        const charWidth = 14;\n        const charHeight = 20;\n        const cols = Math.floor(width / charWidth);\n        const rows = Math.floor(height / charHeight);\n        const totalCharsNeeded = cols * rows;\n        const newRepetitions = Math.max(\n          1,\n          Math.floor(totalCharsNeeded / text.length),\n        );\n        setRepetitions(newRepetitions);\n        setIsReady(true);\n      }\n    };\n\n    requestAnimationFrame(() => {\n      updateRepetitions();\n      setIsReady(true);\n    });\n\n    window.addEventListener(\"resize\", updateRepetitions);\n    return () => window.removeEventListener(\"resize\", updateRepetitions);\n  }, [text]);\n\n  useEffect(() => {\n    if (!isReady) return;\n\n    setVisibleIndices(new Set());\n\n    const repeatedTextLength = text.length * repetitions;\n    const indices = Array.from({ length: repeatedTextLength }, (_, i) => i);\n    const shuffledIndices = indices.sort(() => Math.random() - 0.5);\n\n    const animations = shuffledIndices.map((index, i) =>\n      setTimeout(() => {\n        setVisibleIndices((prev) => new Set([...prev, index]));\n      }, i * delayBetweenLetters),\n    );\n\n    return () => animations.forEach(clearTimeout);\n  }, [text, repetitions, delayBetweenLetters, isReady]);\n\n  const repeatedText = Array(Math.max(1, repetitions))\n    .fill(text)\n    .join(\" \")\n    .toUpperCase();\n\n  return (\n    <div\n      className={cn(\n        \"scramble-container absolute left-0 top-0 size-full overflow-hidden whitespace-pre-wrap break-all bg-background p-4 font-mono tabular-nums\",\n        className,\n      )}\n    >\n      {repeatedText.split(\"\").map((char, index) => (\n        <span\n          key={index}\n          className=\"inline-block\"\n          style={{\n            opacity: visibleIndices.has(index) ? 1 : 0,\n            color: visibleIndices.has(index)\n              ? \"hsl(var(--primary-foreground))\"\n              : \"hsl(var(--primary))\",\n            transform: visibleIndices.has(index) ? \"scale(1)\" : \"scale(0.8)\",\n            transition:\n              \"opacity 0.15s ease-in-out, color 0.3s ease-in-out, transform 0.15s ease-in-out\",\n            width: \"1ch\",\n          }}\n        >\n          {char}\n        </span>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/scramble-appear.tsx"
+    }
+  ]
+}

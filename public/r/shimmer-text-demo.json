@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-text-demo",
+  "type": "registry:example",
+  "title": "Shimmer Text Demo",
+  "description": "Example showing a shimmer text component that shimmers text.",
+  "registryDependencies": [
+    "https://augustui.com/r/shimmer-text"
+  ],
+  "files": [
+    {
+      "path": "registry/example/shimmer-text-demo.tsx",
+      "content": "import ShimmerText from \"@/components/augustui/shimmer-text\";\n\nexport default function LoadingText() {\n  return <ShimmerText text=\"Well, you must be thinking...\" />;\n}\n",
+      "type": "registry:example",
+      "target": "components/shimmer-text-demo.tsx"
+    }
+  ]
+}

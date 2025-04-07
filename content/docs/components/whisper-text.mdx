@@ -1,0 +1,55 @@
+---
+title: Whisper Text
+date: 2024-05-21
+description: Blurred beginnings, clear endings.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="whisper-text-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/whisper-text"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="whisper-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type       | Default | Description                               |
+| ----------- | ---------- | ------- | ----------------------------------------- |
+| `lines`     | `string[]` | `[]`    | Array of text lines to display            |
+| `delay`     | `number`   | `200`   | Delay between each word appearing (in ms) |
+| `className` | `string`   | `""`    | Additional CSS class names                |

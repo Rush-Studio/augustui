@@ -1,0 +1,67 @@
+---
+title: Parallax Hover Card
+date: 2024-05-21
+description: Motion in every glance.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="parallax-hover-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/parallax-hover-card"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="parallax-hover-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop         | Type      | Default           | Description                                       |
+| ------------ | --------- | ----------------- | ------------------------------------------------- |
+| `layers`     | `Layer[]` | Statue of Liberty | Array of layer objects for the parallax effect    |
+| `maxOffsetX` | `number`  | `400`             | Maximum horizontal offset for the parallax effect |
+| `maxOffsetY` | `number`  | `2000`            | Maximum vertical offset for the parallax effect   |
+| `className`  | `string`  | `""`              | Additional CSS class names for the container      |
+
+### Layer Props
+
+| Prop        | Type                                                                  | Default | Description                              |
+| ----------- | --------------------------------------------------------------------- | ------- | ---------------------------------------- |
+| `type`      | `'backgroundImage' \| 'heading' \| 'subheading' \| 'foregroundImage'` | -       | Type of layer                            |
+| `src`       | `string`                                                              | -       | Image source URL (for image layers)      |
+| `alt`       | `string`                                                              | -       | Image alt text (for image layers)        |
+| `content`   | `React.ReactNode`                                                     | -       | Content to display (for text layers)     |
+| `depth`     | `number`                                                              | -       | Parallax depth factor (0-1)              |
+| `className` | `string`                                                              | -       | Additional CSS class names for the layer |

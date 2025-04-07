@@ -1,0 +1,55 @@
+---
+title: Star Wars Prologue
+date: 2024-05-21
+description: A galaxy unfolds, line by line.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="starwars-prologue-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/starwars-prologue"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="starwars-prologue" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type       | Default | Description                     |
+| ----------- | ---------- | ------- | ------------------------------- |
+| `className` | `string`   | `""`    | Additional CSS class names      |
+| `textLines` | `string[]` | -       | Array of text lines to display  |
+| `repeat`    | `boolean`  | `false` | Whether to repeat the animation |

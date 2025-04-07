@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "velvet-view-demo",
+  "type": "registry:example",
+  "title": "Velvet View Demo",
+  "description": "Example showing a velvet view component that displays a list of text.",
+  "registryDependencies": [
+    "https://augustui.com/r/velvet-view"
+  ],
+  "files": [
+    {
+      "path": "registry/example/velvet-view-demo.tsx",
+      "content": "import VelvetView from \"../augustui/velvet-view\";\n\nexport default function VelvetViewDemo() {\n  return (\n    <VelvetView\n      slides={[\n        {\n          imageSrc:\n            \"https://images.unsplash.com/photo-1481018085669-2bc6e4f00eed?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n          imageText: \"Ashen grace in slow motion\",\n        },\n        {\n          imageSrc:\n            \"https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n          imageText: \"Time hums in glass veins\",\n        },\n        {\n          imageSrc:\n            \"https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n          imageText: \"Static hearts, cinematic longing.\",\n        },\n      ]}\n    />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/velvet-view-demo.tsx"
+    }
+  ]
+}

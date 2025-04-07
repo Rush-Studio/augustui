@@ -1,0 +1,55 @@
+---
+title: Shimmer Text
+date: 2024-05-21
+description: Words in waiting.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="shimmer-text-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/shimmer-text"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="shimmer-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type     | Default | Description                |
+| ----------- | -------- | ------- | -------------------------- |
+| `className` | `string` | `""`    | Additional CSS class names |
+| `text`      | `string` | -       | Text to display            |
+| `duration`  | `number` | `2`     | Duration of animation      |

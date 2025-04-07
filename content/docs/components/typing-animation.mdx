@@ -1,0 +1,61 @@
+---
+title: Typing Animation
+date: 2024-05-21
+description: Typing. Erasing. Becoming.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="typing-animation-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/typing-animation"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="typing-animation" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop              | Type                     | Default | Description                                   |
+| ----------------- | ------------------------ | ------- | --------------------------------------------- |
+| `text`            | `string \| string[]`     | -       | Text or array of texts to animate             |
+| `className`       | `string`                 | `""`    | Additional CSS class names                    |
+| `cursorClassName` | `string`                 | `""`    | Additional CSS class names for cursor         |
+| `speed`           | `number`                 | `100`   | Typing speed in milliseconds                  |
+| `cursor`          | `string \| ReactNode`    | `"\|"`  | Custom cursor character or React node         |
+| `loop`            | `boolean`                | `false` | Whether to loop through text array            |
+| `deleteSpeed`     | `number`                 | `50`    | Deletion speed in milliseconds                |
+| `delay`           | `number`                 | `1500`  | Delay between typing/deleting in milliseconds |
+| `onTextChange`    | `(text: string) => void` | -       | Callback fired when displayed text changes    |

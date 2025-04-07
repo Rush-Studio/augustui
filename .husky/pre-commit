@@ -1,0 +1,5 @@
+npm run typecheck
+npm run lint
+npm run build:registry
+npm run format:write
+git add .

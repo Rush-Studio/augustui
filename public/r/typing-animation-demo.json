@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typing-animation-demo",
+  "type": "registry:example",
+  "title": "Typing Animation Demo",
+  "description": "Example showing a typing animation component that animates text as it's typed and retyped.",
+  "registryDependencies": [
+    "https://augustui.com/r/typing-animation"
+  ],
+  "files": [
+    {
+      "path": "registry/example/typing-animation-demo.tsx",
+      "content": "import TypingAnimation from \"@/components/augustui/typing-animation\";\n\nexport default function TypingAnimationDemo() {\n  return (\n    <TypingAnimation\n      text={[\n        \"Hello, world!\",\n        \"Konichiwa, world!\",\n        \"Hola, world!\",\n        \"Namaste, world!\",\n      ]}\n      loop={true}\n    />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/typing-animation-demo.tsx"
+    }
+  ]
+}

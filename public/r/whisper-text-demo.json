@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "whisper-text-demo",
+  "type": "registry:example",
+  "title": "Whisper Text Demo",
+  "description": "Example showing a whisper text component that whispers text.",
+  "registryDependencies": [
+    "https://augustui.com/r/whisper-text"
+  ],
+  "files": [
+    {
+      "path": "registry/example/whisper-text-demo.tsx",
+      "content": "import WhisperText from \"../augustui/whisper-text\";\n\nexport default function WhisperTextDemo() {\n  return (\n    <WhisperText\n      lines={[\"Good things happen\", \"to those who take action\"]}\n      className=\"text-3xl sm:text-4xl md:text-5xl lg:text-6xl\"\n    />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/whisper-text-demo.tsx"
+    }
+  ]
+}

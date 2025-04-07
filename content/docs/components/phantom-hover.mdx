@@ -1,0 +1,57 @@
+---
+title: Phantom Hover
+date: 2024-05-21
+description: Touch without trace.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="phantom-hover-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/phantom-hover"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="phantom-hover" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop           | Type        | Default                  | Description                             |
+| -------------- | ----------- | ------------------------ | --------------------------------------- |
+| `children`     | `ReactNode` | -                        | Content to display inside the container |
+| `className`    | `string`    | -                        | Additional CSS class names              |
+| `hoverColor`   | `string`    | `hsl(var(--accent))`     | Background color when hovered           |
+| `pressedColor` | `string`    | `hsl(var(--accent))/0.1` | Background color when pressed           |
+| `radius`       | `number`    | -                        | Border radius of the hover effect       |

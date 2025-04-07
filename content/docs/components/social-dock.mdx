@@ -1,0 +1,62 @@
+---
+title: Social Dock
+date: 2024-05-21
+description: Hover to connect, softly bold.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="social-dock-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/social-dock"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="social-dock" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop        | Type             | Default | Description                           |
+| ----------- | ---------------- | ------- | ------------------------------------- |
+| `className` | `string`         | `""`    | Additional CSS class names            |
+| `items`     | `DockItemData[]` | -       | Array of items to display in the dock |
+
+The `DockItemData` type has the following properties:
+
+| Property | Type        | Description                            |
+| -------- | ----------- | -------------------------------------- |
+| `link`   | `string`    | URL that the item links to             |
+| `Icon`   | `ReactNode` | Icon component to display              |
+| `target` | `string`    | Optional target attribute for the link |

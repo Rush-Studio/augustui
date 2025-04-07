@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "perspective-pile-demo",
+  "type": "registry:example",
+  "title": "Perspective Pile Demo",
+  "description": "Example showing a perspective pile component that displays a list of images.",
+  "registryDependencies": [
+    "https://augustui.com/r/perspective-pile"
+  ],
+  "files": [
+    {
+      "path": "registry/example/perspective-pile-demo.tsx",
+      "content": "import PerspectivePile from \"../augustui/perspective-pile\";\n\nexport default function PerspectivePileDemo() {\n  return (\n    <PerspectivePile\n      images={[\n        \"https://images.unsplash.com/photo-1742268351444-7e153a9fb747?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"https://images.unsplash.com/photo-1742228896964-83f6327740ea?q=80&w=3212&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"https://images.unsplash.com/photo-1742943679519-bb9eb364b152?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n      ]}\n      className=\"size-80 pt-16\"\n    />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/perspective-pile-demo.tsx"
+    }
+  ]
+}

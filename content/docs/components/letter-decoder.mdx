@@ -1,0 +1,52 @@
+---
+title: Letter Decoder
+date: 2024-05-21
+description: From code to clarity.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="letter-decoder-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/letter-decoder"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="letter-decoder" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop             | Type      | Default | Description                      |
+| ---------------- | --------- | ------- | -------------------------------- |
+| `className`      | `string`  | `""`    | Additional CSS class names       |
+| `text`           | `string`  | `""`    | Text to decode                   |
+| `triggerOnHover` | `boolean` | `false` | Trigger the effect on hover      |
+| `triggerOnMount` | `boolean` | `true`  | Trigger the effect on mount      |
+| `scrambleSpeed`  | `number`  | `50`    | Speed of the scramble effect     |
+| `decodeTime`     | `number`  | `1000`  | Time it takes to decode the text |

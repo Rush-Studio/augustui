@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-vibe",
+  "type": "registry:ui",
+  "title": "Hover Vibe",
+  "description": "A hover vibe component that displays a list of text.",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/hover-vibe.tsx",
+      "content": "import { motion } from \"framer-motion\";\n\nexport default function HoverZoomCard() {\n  return (\n    <div className=\"relative w-80 h-56 overflow-hidden rounded-xl shadow-lg cursor-pointer group\">\n      {/* Background Image */}\n      <motion.img\n        src=\"https://images.unsplash.com/photo-1741851374467-c53876940807?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\n        alt=\"Camera\"\n        className=\"w-full object-cover\"\n        initial={{ height: \"40%\" }}\n        whileHover={{ height: \"100%\", scale: 1.1 }}\n        transition={{ type: \"spring\", stiffness: 150, damping: 12 }}\n      />\n\n      {/* Overlay */}\n      <motion.div\n        className=\"absolute inset-0 bg-black/50\"\n        initial={{ opacity: 0 }}\n        whileHover={{ opacity: 1 }}\n        transition={{ duration: 0.4 }}\n      ></motion.div>\n\n      {/* Heading */}\n      <motion.div\n        className=\"absolute top-4 left-4 text-white font-bold text-xl\"\n        initial={{ y: 0 }}\n        whileHover={{ y: \"90px\", x: \"50%\", translateX: \"-50%\" }}\n        transition={{ type: \"spring\", stiffness: 120, damping: 10 }}\n      >\n        TEXT HERE\n      </motion.div>\n\n      {/* Explore Button */}\n      <motion.div\n        className=\"absolute bottom-4 left-4 text-white flex items-center gap-1 opacity-0\"\n        initial={{ opacity: 0, y: 10 }}\n        whileHover={{ opacity: 1, y: 0 }}\n        transition={{ type: \"spring\", stiffness: 120, damping: 10, delay: 0.1 }}\n      >\n        <span>EXPLORE</span> <span className=\"text-lg\">➜</span>\n      </motion.div>\n    </div>\n  );\n}",
+      "type": "registry:ui",
+      "target": "components/augustui/hover-vibe.tsx"
+    }
+  ]
+}

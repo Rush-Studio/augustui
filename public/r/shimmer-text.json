@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmer-text",
+  "type": "registry:ui",
+  "title": "Shimmer Text",
+  "description": "A shimmer text component that shimmers text.",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/shimmer-text.tsx",
+      "content": "\"use client\";\n\nimport { cn } from \"@/lib/utils\";\nimport { motion } from \"motion/react\";\n\ninterface ShimmerTextProps {\n  text: string;\n  duration?: number;\n  className?: string;\n  gradient?: string;\n}\n\nexport default function ShimmerText({\n  text,\n  duration = 2,\n  className = \"\",\n}: ShimmerTextProps) {\n  return (\n    <motion.h1\n      className={cn(className, \"bg-clip-text\", \"text-base\", \"font-medium\")}\n      style={{\n        backgroundImage: `linear-gradient(110deg, hsl(var(--muted)), 45%, hsl(var(--foreground)), 55%, hsl(var(--muted)))`,\n        backgroundSize: \"200% 100%\",\n        WebkitBackgroundClip: \"text\",\n        color: \"transparent\",\n      }}\n      initial={{ backgroundPosition: \"200% 0\" }}\n      animate={{ backgroundPosition: \"-200% 0\" }}\n      transition={{\n        repeat: Infinity,\n        duration: duration,\n        ease: \"linear\",\n        repeatType: \"loop\",\n      }}\n    >\n      {text}\n    </motion.h1>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/shimmer-text.tsx"
+    }
+  ]
+}

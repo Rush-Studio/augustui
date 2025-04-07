@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "interactive-waves-demo",
+  "type": "registry:example",
+  "title": "Interactive Waves Demo",
+  "description": "Example showing a interactive waves component that animates the waves and moves them based on the mouse position.",
+  "registryDependencies": [
+    "https://augustui.com/r/interactive-waves"
+  ],
+  "files": [
+    {
+      "path": "registry/example/interactive-waves-demo.tsx",
+      "content": "import InteractiveWaves from \"../augustui/interactive-waves\"\n\nexport default function InteractiveWavesDemo() {\n\n  return (\n    <div className=\"relative w-full h-[400px] bg-background/80 rounded-lg overflow-hidden border mb-12\">\n      <div className=\"absolute inset-0\">\n        <InteractiveWaves\n          waveSpeedX={0.02}\n          waveSpeedY={0.01}\n          waveAmpX={40}\n          waveAmpY={20}\n          friction={0.9}\n          tension={0.01}\n          maxCursorMove={120}\n          xGap={12}\n          yGap={36}\n        />\n      </div>\n\n      <div className=\"relative z-10 p-8\">\n        <h3 className=\"text-2xl font-bold text-primary\">Non-Interactive Waves</h3>\n        <p className=\"text-primary\">Don't Move your mouse to interact with the waves</p>\n      </div>\n    </div>\n  )\n}",
+      "type": "registry:example",
+      "target": "components/interactive-waves-demo.tsx"
+    }
+  ]
+}

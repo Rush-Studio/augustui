@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "whisper-text",
+  "type": "registry:ui",
+  "title": "Whisper Text",
+  "description": "A whisper text component that whispers text.",
+  "dependencies": [
+    "react"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/whisper-text.tsx",
+      "content": "\"use client\";\nimport { useEffect, useState } from \"react\";\n\ninterface WhisperTextProps {\n  lines: string[];\n  delay?: number;\n  className?: string;\n}\n\nexport default function WhisperText({\n  lines = [\"Great things happen\", \"to those who take action\"],\n  delay = 200,\n  className = \"mb-8 text-5xl font-medium md:text-6xl\",\n}: WhisperTextProps) {\n  const [visibleWords, setVisibleWords] = useState<string[]>([]);\n  const allWords = lines.flatMap((line) => line.split(\" \"));\n\n  useEffect(() => {\n    const timer = setTimeout(() => {\n      if (visibleWords.length < allWords.length) {\n        setVisibleWords((prev) => [...prev, allWords[prev.length]]);\n      }\n    }, delay);\n\n    return () => clearTimeout(timer);\n  }, [visibleWords, allWords, delay]);\n\n  return (\n    <h1 className={className}>\n      {lines.map((line, lineIndex) => (\n        <div key={lineIndex}>\n          {line.split(\" \").map((word, wordIndex) => (\n            <span\n              key={`${lineIndex}-${wordIndex}`}\n              className=\"mr-2 inline-block transition-all duration-500\"\n              style={{\n                opacity: visibleWords.includes(word) ? 1 : 0,\n                filter: visibleWords.includes(word) ? \"blur(0)\" : \"blur(8px)\",\n              }}\n            >\n              {word}\n            </span>\n          ))}\n        </div>\n      ))}\n    </h1>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/whisper-text.tsx"
+    }
+  ]
+}

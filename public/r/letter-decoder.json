@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-decoder",
+  "type": "registry:ui",
+  "title": "Letter Decoder",
+  "description": "A letter decoder component that decodes text as it's typed.",
+  "dependencies": [
+    "react"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/letter-decoder.tsx",
+      "content": "\"use client\";\n\nimport { useState, useEffect } from \"react\";\n\ninterface LetterDecoderProps {\n  text: string;\n  triggerOnHover?: boolean;\n  triggerOnMount?: boolean;\n  scrambleSpeed?: number;\n  decodeTime?: number;\n}\n\nexport const LetterDecoder: React.FC<LetterDecoderProps> = ({\n  text,\n  triggerOnHover = false,\n  triggerOnMount = true,\n  scrambleSpeed = 50,\n  decodeTime = 1500,\n}) => {\n  const [displayText, setDisplayText] = useState(text);\n  const [isDecoding, setIsDecoding] = useState(false);\n\n  const characters =\n    \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()\";\n\n  const scrambleText = () => {\n    setIsDecoding(true);\n    let iterations = 0;\n    const maxIterations = Math.floor(decodeTime / scrambleSpeed);\n\n    const interval = setInterval(() => {\n      setDisplayText((prevText) => {\n        return prevText\n          .split(\"\")\n          .map((char, index) => {\n            // Keep spaces unchanged\n            if (char === \" \") return \" \";\n            // Gradually reveal original characters\n            if (iterations > maxIterations * (index / text.length)) {\n              return text[index];\n            }\n            // Random character\n            return characters[Math.floor(Math.random() * characters.length)];\n          })\n          .join(\"\");\n      });\n\n      iterations += 1;\n\n      if (iterations >= maxIterations) {\n        clearInterval(interval);\n        setDisplayText(text);\n        setIsDecoding(false);\n      }\n    }, scrambleSpeed);\n  };\n\n  useEffect(() => {\n    if (triggerOnMount) {\n      scrambleText();\n    }\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, []);\n\n  return (\n    <span\n      onMouseEnter={() => {\n        if (triggerOnHover && !isDecoding) {\n          scrambleText();\n        }\n      }}\n      style={{ display: \"inline-block\" }}\n    >\n      {displayText}\n    </span>\n  );\n};\n",
+      "type": "registry:ui",
+      "target": "components/augustui/letter-decoder.tsx"
+    }
+  ]
+}

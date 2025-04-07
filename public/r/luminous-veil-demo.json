@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "luminous-veil-demo",
+  "type": "registry:example",
+  "title": "Luminous Veil Demo",
+  "description": "Example showing a refined background component featuring soft, cascading light beams for an elegant and immersive experience.",
+  "registryDependencies": [
+    "https://augustui.com/r/luminous-veil"
+  ],
+  "files": [
+    {
+      "path": "registry/example/luminous-veil-demo.tsx",
+      "content": "\"use client\";\nimport LuminousVeil from \"../augustui/luminous-veil\";\nimport { useTheme } from \"next-themes\";\n\nexport default function LuminousVeilDemo() {\n  const { theme } = useTheme();\n\n  return (\n    <div className=\"relative flex min-h-[350px] w-full items-center justify-center\">\n      <LuminousVeil\n        intensity=\"strong\"\n        className=\"rounded-xl\"\n        theme={\n          theme === \"light\" ? \"light\" : theme === \"dark\" ? \"dark\" : \"system\"\n        }\n      />\n      <div className=\"relative z-10 flex flex-col items-center justify-center\">\n        <h1 className=\"text-4xl font-bold\">Luminous Veil</h1>\n        <p className=\"text-sm text-muted-foreground\">\n          Subtle beams, timeless elegance.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/luminous-veil-demo.tsx"
+    }
+  ]
+}

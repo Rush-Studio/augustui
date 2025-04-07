@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glazing-button-demo",
+  "type": "registry:example",
+  "title": "Glazing Button Demo",
+  "description": "Example showing a glazing button component that glazes the button.",
+  "registryDependencies": [
+    "https://augustui.com/r/glazing-button"
+  ],
+  "files": [
+    {
+      "path": "registry/example/glazing-button-demo.tsx",
+      "content": "import GlazingButton from \"../augustui/glazing-button\";\n\nexport default function GlazingButtonDemo() {\n  return (\n    <div className=\"flex flex-col gap-4\">\n      <GlazingButton>Glazing Button</GlazingButton>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/glazing-button-demo.tsx"
+    }
+  ]
+}

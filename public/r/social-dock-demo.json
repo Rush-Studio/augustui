@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "social-dock-demo",
+  "type": "registry:example",
+  "title": "Social Dock Demo",
+  "description": "Example showing a social dock component that displays a list of social media icons.",
+  "registryDependencies": [
+    "https://augustui.com/r/social-dock"
+  ],
+  "files": [
+    {
+      "path": "registry/example/social-dock-demo.tsx",
+      "content": "import Discord from \"@/components/icons/Discord\";\nimport Twitter from \"@/components/icons/Twitter\";\nimport SocialDock from \"../augustui/social-dock\";\nimport { Linkedin, Github } from \"lucide-react\";\n\nexport default function SocialDockDemo() {\n  return (\n    <SocialDock\n      items={[\n        {\n          link: \"https://github.com/Rush-Studio\",\n          target: \"_blank\",\n          Icon: <Github size={22} />,\n        },\n        {\n          link: \"https://x.com/Rush_Studio\",\n          target: \"_blank\",\n          Icon: <Twitter className=\"size-5\" />,\n        },\n        {\n          link: \"https://dsc.gg/rushstudio\",\n          target: \"_blank\",\n          Icon: <Discord className=\"size-6\" />,\n        },\n        {\n          link: \"https://linkedin.com/in/rush-studio\",\n          target: \"_blank\",\n          Icon: <Linkedin className=\"size-5\" />,\n        },\n      ]}\n    />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/social-dock-demo.tsx"
+    }
+  ]
+}

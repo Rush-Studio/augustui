@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "starwars-prologue",
+  "type": "registry:ui",
+  "title": "Star Wars Prologue",
+  "description": "A star wars prologue component that displays a list of text.",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/starwars-prologue.tsx",
+      "content": "\"use client\";\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\ninterface StarwarsPrologueProps {\n  textLines: string[];\n  repeat?: boolean;\n  className?: string;\n}\n\nexport default function StarwarsPrologue({\n  textLines = [\n    \"A long time ago in a galaxy far, far away...\",\n    \"The Galactic Empire has spread its dominion across countless star systems, ruling with an iron fist and crushing any resistance in its path.\",\n    \"But hope remains. A small band of rebels, united in their determination to restore freedom to the galaxy, has begun to gather strength.\",\n    \"Deep in the Outer Rim territories, brave pilots and warriors train in secret, preparing for the inevitable confrontation with Imperial forces.\",\n    \"As darkness grows deeper, ancient prophecies speak of a chosen one who will bring balance to the Force and challenge the Empire's supremacy.\",\n    \"Now, as the stars align and destinies converge, the fate of the galaxy hangs precariously in the balance...\",\n  ],\n  repeat = false,\n  className = \"\",\n}: StarwarsPrologueProps) {\n  return (\n    <div\n      className={cn(\n        \"relative flex justify-center items-center h-full w-full overflow-hidden\",\n        className,\n      )}\n    >\n      <div\n        className=\"absolute inset-0 flex justify-center\"\n        style={{ perspective: \"400px\" }}\n      >\n        <div\n          className=\"absolute w-full h-full\"\n          style={{\n            transformStyle: \"preserve-3d\",\n            transform: \"rotateX(60deg)\",\n            transformOrigin: \"center bottom\",\n          }}\n        >\n          <motion.div\n            initial={{ y: \"100%\", opacity: 1 }}\n            animate={{\n              y: \"-100%\",\n              opacity: [1, 1, 1, 1, 1, 1, 1, 1, 0],\n            }}\n            transition={{\n              duration: 10,\n              ease: \"linear\",\n              repeat: repeat ? Infinity : 0,\n              repeatDelay: 1,\n              times: [0, 0.7, 0.75, 0.8, 0.85, 0.9, 0.92, 0.95, 1],\n            }}\n            className=\"absolute text-center w-[80%] left-[10%] uppercase\"\n            style={{\n              transformStyle: \"preserve-3d\",\n            }}\n          >\n            <div\n              className=\"transform-gpu\"\n              style={{ transform: \"translateZ(0)\" }}\n            >\n              {textLines.map((line, index) => (\n                <p\n                  key={index}\n                  className=\"mb-8 text-xl font-bold text-white text-justify\"\n                  style={{\n                    background:\n                      \"linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 50%, rgba(200,200,200,0.5) 100%)\",\n                    WebkitBackgroundClip: \"text\",\n                    WebkitTextFillColor: \"transparent\",\n                  }}\n                >\n                  {line}\n                </p>\n              ))}\n            </div>\n          </motion.div>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/starwars-prologue.tsx"
+    }
+  ]
+}

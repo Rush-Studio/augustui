@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tectonic-waves-demo",
+  "type": "registry:example",
+  "title": "Tectonic Waves Demo",
+  "description": "Example showing a tectonic waves component that animates the waves like tectonic plates.",
+  "registryDependencies": [
+    "https://augustui.com/r/tectonic-waves"
+  ],
+  "files": [
+    {
+      "path": "registry/example/tectonic-waves-demo.tsx",
+      "content": "\"use client\";\nimport TectonicWaves from \"../augustui/tectonic-waves\";\nimport { useTheme } from \"next-themes\";\n\nexport default function TectonicWavesDemo() {\n  const { theme } = useTheme();\n  return (\n    <div className=\"relative flex min-h-[350px] w-full\">\n      <TectonicWaves\n        lineColor={theme === \"dark\" ? \"white\" : \"black\"}\n        backgroundColor={theme === \"dark\" ? \"black\" : \"white\"}\n        waveSpeedX={0.02}\n        waveSpeedY={0.01}\n        waveAmpX={40}\n        waveAmpY={20}\n        xGap={12}\n        yGap={36}\n      />\n      <div className=\"absolute inset-0 flex flex-col items-center justify-center\">\n        <p className=\"text-4xl font-bold\">Tectonic Waves</p>\n        <p className=\"text-sm text-muted-foreground\">\n          Fluid motion, grounded strength.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/tectonic-waves-demo.tsx"
+    }
+  ]
+}

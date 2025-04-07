@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "swipe-flicker-demo",
+  "type": "registry:example",
+  "title": "Swipe Flicker Demo",
+  "description": "Example showing a swipe flicker component that flickers images.",
+  "registryDependencies": [
+    "https://augustui.com/r/swipe-flicker"
+  ],
+  "files": [
+    {
+      "path": "registry/example/swipe-flicker-demo.tsx",
+      "content": "import SwipeFlicker from \"../augustui/swipe-flicker\";\n\nexport default function SwipeFlickerDemo() {\n  const images = [\n    \"https://images.unsplash.com/photo-1721059537602-e844ccc60c94?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1661962399580-80301d32d791?q=80&w=3850&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1663792573804-0347dfaffdab?q=80&w=3880&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1664700651198-42cf8d382dc3?q=80&w=3871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1722929517020-69d5530e8c92?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1711239682372-fd545e32cb5b?q=80&w=3276&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1663868891817-8853b9eb83f0?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"https://images.unsplash.com/photo-1721059571819-e57015549fa1?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n  ];\n\n  return (\n    <div className=\"relative size-full\">\n      <SwipeFlicker images={images} />\n      <div className=\"pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-1 text-center text-white\">\n        <h2 className=\"text-3xl font-bold drop-shadow-lg\">\n          NOTHING to see here\n        </h2>\n        <p className=\"drop-shadow-md\">Just swipe your cursor and proceed</p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/swipe-flicker-demo.tsx"
+    }
+  ]
+}

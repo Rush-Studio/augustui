@@ -1,0 +1,72 @@
+---
+title: Cascade Cards
+date: 2024-05-21
+description: Stacked cards that lift gently on hover.
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="cascade-cards-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/cascade-cards"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="cascade-cards" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop          | Type                                  | Default | Description                                              |
+| ------------- | ------------------------------------- | ------- | -------------------------------------------------------- |
+| `cards`       | `CascadeCardProps[]`                  | -       | Array of card data to display                            |
+| `variant`     | `'default' \| 'custom'`               | -       | Visual variant of the cards                              |
+| `maxVisible`  | `number`                              | -       | Maximum number of visible cards                          |
+| `gapX`        | `number`                              | 50      | Horizontal gap between cards                             |
+| `gapY`        | `number`                              | 25      | Vertical gap between cards                               |
+| `skewAngle`   | `number`                              | -8      | Skew angle of the cards in degrees                       |
+| `hoverLift`   | `number`                              | 15      | Amount to lift cards on hover                            |
+| `hoverEffect` | `'lift' \| 'top' \| 'both' \| 'none'` | 'none'  | Hover effect type - lift up, bring to top, both, or none |
+
+### CascadeCardProps
+
+| Prop             | Type              | Default                                         | Description                         |
+| ---------------- | ----------------- | ----------------------------------------------- | ----------------------------------- |
+| `className`      | `string`          | -                                               | Optional class name for the card    |
+| `icon`           | `React.ReactNode` | `<Sparkles className="size-4 text-blue-300" />` | Icon element to display             |
+| `title`          | `string`          | "Featured"                                      | Title text for the card             |
+| `description`    | `string`          | "Discover amazing content"                      | Description text for the card       |
+| `date`           | `string`          | "Just now"                                      | Date/time text for the card         |
+| `titleClassName` | `string`          | "text-blue-500"                                 | Optional class name for the title   |
+| `style`          | `CSSProperties`   | -                                               | Optional inline styles for the card |

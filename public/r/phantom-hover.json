@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "phantom-hover",
+  "type": "registry:ui",
+  "title": "Phantom Hover",
+  "description": "A phantom hover component that hovers over the element.",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/phantom-hover.tsx",
+      "content": "\"use client\";\n\nimport { useState, useEffect, ReactNode, useRef } from \"react\";\nimport { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface PhantomHoverProps {\n  className?: string;\n  children?: ReactNode;\n  hoverColor?: string;\n  pressedColor?: string;\n  radius?: number;\n}\n\nexport default function PhantomHover({\n  children,\n  hoverColor = \"hsl(var(--accent))\",\n  pressedColor = \"hsl(var(--accent))\",\n}: PhantomHoverProps) {\n  const [isHovered, setIsHovered] = useState(false);\n  const [isPressed, setIsPressed] = useState(false);\n  const containerRef = useRef<HTMLDivElement>(null);\n\n  useEffect(() => {\n    if (isHovered) {\n      const styleTag = document.createElement(\"style\");\n      styleTag.innerHTML = `\n        .phantom-hover-container * {\n          cursor: none !important;\n        }\n      `;\n      document.head.appendChild(styleTag);\n\n      return () => {\n        document.head.removeChild(styleTag);\n      };\n    }\n  }, [isHovered]);\n\n  // Debug hover state\n  useEffect(() => {\n    console.log(\"Hover state:\", isHovered);\n  }, [isHovered]);\n\n  return (\n    <div style={{ position: \"relative\", display: \"inline-block\" }}>\n      {isHovered && (\n        <motion.div\n          initial={{ opacity: 0 }}\n          animate={{\n            opacity: 1,\n          }}\n          transition={{ duration: 0.1 }}\n          style={{\n            position: \"absolute\",\n            top: 0,\n            left: 0,\n            right: 0,\n            bottom: 0,\n            backgroundColor: isPressed ? pressedColor : hoverColor,\n            pointerEvents: \"none\",\n          }}\n          className={cn(\"rounded-md\")}\n        />\n      )}\n\n      <motion.div\n        ref={containerRef}\n        className=\"phantom-hover-container\"\n        style={{\n          position: \"relative\",\n          cursor: isHovered ? \"none\" : \"auto\",\n          transition: \"all 0.2s ease\",\n          zIndex: 1,\n        }}\n        onHoverStart={() => setIsHovered(true)}\n        onHoverEnd={() => setIsHovered(false)}\n        onTapStart={() => setIsPressed(true)}\n        onTap={() => setIsPressed(false)}\n        onTapCancel={() => setIsPressed(false)}\n      >\n        {children}\n      </motion.div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/phantom-hover.tsx"
+    }
+  ]
+}

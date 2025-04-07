@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "starwars-prologue-demo",
+  "type": "registry:example",
+  "title": "Star Wars Prologue Demo",
+  "description": "Example showing a star wars prologue component that displays a list of text.",
+  "registryDependencies": [
+    "https://augustui.com/r/starwars-prologue"
+  ],
+  "files": [
+    {
+      "path": "registry/example/starwars-prologue-demo.tsx",
+      "content": "import StarwarsPrologue from \"../augustui/starwars-prologue\";\n\nexport default function StarwarsPrologueDemo() {\n  return (\n    <div\n      className=\"w-full relative h-[350px] bg-cover bg-center rounded-lg overflow-hidden\"\n      style={{\n        backgroundImage:\n          \"url('https://images.unsplash.com/photo-1533613220915-609f661a6fe1?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')\",\n      }}\n    >\n      <StarwarsPrologue\n        textLines={[\n          \"A long time ago in a galaxy far, far away...\",\n          \"The Galactic Empire has spread its dominion across countless star systems, ruling with an iron fist and crushing any resistance in its path.\",\n          \"But hope remains. A small band of rebels, united in their determination to restore freedom to the galaxy, has begun to gather strength.\",\n          \"Deep in the Outer Rim territories, brave pilots and warriors train in secret, preparing for the inevitable confrontation with Imperial forces.\",\n          \"As darkness grows deeper, ancient prophecies speak of a chosen one who will bring balance to the Force and challenge the Empire's supremacy.\",\n          \"Now, as the stars align and destinies converge, the fate of the galaxy hangs precariously in the balance...\",\n        ]}\n        repeat={true}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/starwars-prologue-demo.tsx"
+    }
+  ]
+}

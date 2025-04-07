@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cascade-cards-demo",
+  "type": "registry:example",
+  "title": "Cascade Cards Demo",
+  "description": "Example showing a cascade cards component that displays a list of cards.",
+  "registryDependencies": [
+    "https://augustui.com/r/cascade-cards"
+  ],
+  "files": [
+    {
+      "path": "registry/example/cascade-cards-demo.tsx",
+      "content": "import CascadeCards from \"@/components/augustui/cascade-cards\";\nimport { Sparkles } from \"lucide-react\";\n\nconst cards = [\n  {\n    icon: <Sparkles className=\"size-4 text-blue-300\" />,\n    title: \"Featured\",\n    description: \"Discover amazing content\",\n    date: \"Just now\",\n    iconClassName: \"text-blue-500\",\n    titleClassName: \"text-blue-500\",\n  },\n  {\n    icon: <Sparkles className=\"size-4 text-blue-300\" />,\n    title: \"Popular\",\n    description: \"Trending this week\",\n    date: \"2 days ago\",\n    iconClassName: \"text-blue-500\",\n    titleClassName: \"text-blue-500\",\n  },\n  {\n    icon: <Sparkles className=\"size-4 text-blue-300\" />,\n    title: \"New\",\n    description: \"Latest updates and features\",\n    date: \"Today\",\n    iconClassName: \"text-blue-500\",\n    titleClassName: \"text-blue-500\",\n  },\n];\n\nexport default function CascadeCardsDemo() {\n  return (\n    <div className=\"mr-72 mt-auto\">\n      <CascadeCards cards={cards} hoverEffect=\"top\" />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/cascade-cards-demo.tsx"
+    }
+  ]
+}

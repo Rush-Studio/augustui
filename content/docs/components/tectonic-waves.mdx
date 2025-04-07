@@ -1,0 +1,62 @@
+---
+title: Tectonic Waves
+date: 2024-05-21
+description: Fuild motion, grounded strength
+author: goyalsamarth
+published: true
+---
+
+<ComponentPreview name="tectonic-waves-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://augustui.com/r/tectonic-waves"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install motion
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tectonic-waves" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop              | Type            | Default             | Description                       |
+| ----------------- | --------------- | ------------------- | --------------------------------- |
+| `lineColor`       | `string`        | `var(--primary)`    | The color of the wave lines       |
+| `backgroundColor` | `string`        | `var(--background)` | The background color              |
+| `waveSpeedX`      | `number`        | `0.0125`            | Speed of horizontal wave movement |
+| `waveSpeedY`      | `number`        | `0.005`             | Speed of vertical wave movement   |
+| `waveAmpX`        | `number`        | `32`                | Amplitude of horizontal waves     |
+| `waveAmpY`        | `number`        | `16`                | Amplitude of vertical waves       |
+| `xGap`            | `number`        | `10`                | Horizontal gap between wave lines |
+| `yGap`            | `number`        | `32`                | Vertical gap between wave points  |
+| `style`           | `CSSProperties` | `{}`                | Additional CSS styles             |
+| `className`       | `string`        | `""`                | Additional CSS class names        |

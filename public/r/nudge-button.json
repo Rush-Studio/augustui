@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "nudge-button",
+  "type": "registry:ui",
+  "title": "Nudge Button",
+  "description": "A nudge button component that nudes text.",
+  "dependencies": [
+    "react",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/augustui/nudge-button.tsx",
+      "content": "\"use client\";\nimport { cn } from \"@/lib/utils\";\nimport { motion } from \"motion/react\";\nimport { useState } from \"react\";\n\ninterface NudgeButtonProps {\n  children: React.ReactNode;\n  nudgeText?: string | number;\n  nudgeDirection?: \"up\" | \"down\" | \"left\" | \"right\";\n  className?: string;\n  buttonClassName?: string;\n  nudgeClassName?: string;\n  nudgeTextClassName?: string;\n  onClick?: () => void;\n}\n\nexport default function NudgeButton({\n  children,\n  nudgeText = \"A bold choice\",\n  nudgeDirection = \"up\",\n  className = \"\",\n  buttonClassName = \"\",\n  nudgeClassName = \"\",\n  nudgeTextClassName = \"\",\n  onClick,\n}: NudgeButtonProps) {\n  const [isHovered, setIsHovered] = useState(false);\n\n  const getAnimationProps = () => {\n    switch (nudgeDirection) {\n      case \"up\":\n        return { y: isHovered ? -30 : 0 };\n      case \"down\":\n        return { y: isHovered ? 30 : 0 };\n      case \"left\":\n        return { x: isHovered ? -30 : 0 };\n      case \"right\":\n        return { x: isHovered ? 30 : 0 };\n    }\n  };\n\n  return (\n    <div\n      className={cn(\n        \"relative flex h-14 w-64 items-center justify-center\",\n        className,\n      )}\n    >\n      <motion.div\n        initial={{ y: 0, x: 0 }}\n        animate={getAnimationProps()}\n        transition={{\n          type: \"spring\",\n          stiffness: 300,\n          damping: 30,\n        }}\n        className={cn(\n          \"absolute z-0 size-full rounded-xl bg-primary\",\n          nudgeClassName,\n        )}\n      >\n        <p\n          className={cn(\n            \"mt-1.5 text-center text-sm font-semibold text-primary-foreground\",\n            nudgeTextClassName,\n          )}\n        >\n          {nudgeText}\n        </p>\n      </motion.div>\n\n      <button\n        className={cn(\n          \"relative z-10 size-full rounded-xl border-4 border-primary bg-background px-2 py-1 text-primary\",\n          buttonClassName,\n        )}\n        onMouseEnter={() => setIsHovered(true)}\n        onMouseLeave={() => setIsHovered(false)}\n      >\n        {children}\n      </button>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/augustui/nudge-button.tsx"
+    }
+  ]
+}

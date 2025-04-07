@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scramble-appear-demo",
+  "type": "registry:example",
+  "title": "Scramble Appear Demo",
+  "description": "Example showing a dynamic text effect that scrambles and blinks each letter into place for the added intrigue and elegance.",
+  "registryDependencies": [
+    "https://augustui.com/r/scramble-appear"
+  ],
+  "files": [
+    {
+      "path": "registry/example/scramble-appear-demo.tsx",
+      "content": "import ScrambleAppear from \"../augustui/scramble-appear\";\n\nexport default function ScrambleAppearDemo() {\n  return (\n    <div className=\"relative flex min-h-[350px] w-full items-center justify-center overflow-hidden\">\n      <ScrambleAppear text=\"HELLO, WORLD!\" className=\"rounded-xl\" />\n      <div className=\"relative z-10 flex flex-col items-center justify-center\">\n        <p className=\"text-4xl font-bold\">Scramble Appear</p>\n        <p className=\"text-sm text-muted-foreground\">\n          Letters in motion, revealing meaning.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/scramble-appear-demo.tsx"
+    }
+  ]
+}

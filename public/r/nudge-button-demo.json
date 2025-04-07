@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "nudge-button-demo",
+  "type": "registry:example",
+  "title": "Nudge Button Demo",
+  "description": "Example showing a nudge button component that nudes text.",
+  "registryDependencies": [
+    "https://augustui.com/r/nudge-button"
+  ],
+  "files": [
+    {
+      "path": "registry/example/nudge-button-demo.tsx",
+      "content": "import NudgeButton from \"../augustui/nudge-button\";\n\nexport default function NudgeButtonDemo() {\n  return (\n    <NudgeButton nudgeDirection=\"up\" nudgeText=\"A bold choice\">\n      <p>A gentle nudge</p>\n    </NudgeButton>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/nudge-button-demo.tsx"
+    }
+  ]
+}

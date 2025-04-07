@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "parallax-hover-card-demo",
+  "type": "registry:example",
+  "title": "Parallax Hover Card Demo",
+  "description": "Example showing a parallax hover card component that displays a list of text.",
+  "registryDependencies": [
+    "https://augustui.com/r/parallax-hover-card"
+  ],
+  "files": [
+    {
+      "path": "registry/example/parallax-hover-card-demo.tsx",
+      "content": "import ParallaxHoverCard, {\n  Layer,\n} from \"@/components/augustui/parallax-hover-card\";\n\nexport default function ParallaxHoverCardDemo() {\n  const layers: Layer[] = [\n    {\n      type: \"backgroundImage\",\n      src: \"https://plus.unsplash.com/premium_photo-1714051660720-888e8454a021?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n      alt: \"Sky\",\n      depth: 0, // No parallax for background\n      className: \"z-10\",\n    },\n    {\n      type: \"heading\",\n      content: (\n        <h2 className=\"text-2xl font-bold text-white uppercase\">\n          PARALLAX CARD\n        </h2>\n      ),\n      depth: 0.3,\n      className: \"z-30\",\n    },\n    {\n      type: \"foregroundImage\",\n      src: \"/liberty.png\",\n      alt: \"Castle\",\n      depth: 0.5, // Reduced parallax for foreground\n      className: \"z-20\",\n    },\n    {\n      type: \"subheading\",\n      content: (\n        <div className=\"flex flex-col\">\n          <p className=\"text-sm\">Status of Liberty</p>\n          <p className=\"text-sm\">New York City, USA</p>\n        </div>\n      ),\n      depth: 0,\n      className: \"z-40\",\n    },\n  ];\n\n  return (\n    <div className=\"flex justify-center items-center max-h-[250px] max-w-[250px]\">\n      <ParallaxHoverCard layers={layers} />\n    </div>\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/parallax-hover-card-demo.tsx"
+    }
+  ]
+}

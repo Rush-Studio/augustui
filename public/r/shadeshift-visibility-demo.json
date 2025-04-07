@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadeshift-visibility-demo",
+  "type": "registry:example",
+  "title": "ShadeShift Visibility Demo",
+  "description": "Example showing a shade shift visibility component that displays a list of text.",
+  "registryDependencies": [
+    "https://augustui.com/r/shadeshift-visibility"
+  ],
+  "files": [
+    {
+      "path": "registry/example/shadeshift-visibility-demo.tsx",
+      "content": "import ShadeShiftVisibility from \"@/components/augustui/shadeshift-visibility\";\n\nexport default function ShadeShiftVisibilityDemo() {\n  return (\n    <ShadeShiftVisibility src=\"https://images.unsplash.com/photo-1741851374430-d242e0dcd70c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\" />\n  );\n}\n",
+      "type": "registry:example",
+      "target": "components/shadeshift-visibility-demo.tsx"
+    }
+  ]
+}
