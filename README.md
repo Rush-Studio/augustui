@@ -4,7 +4,7 @@
 </p>
 <div align="center">
   <a href="https://github.com/rush-studio/augustui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/rush-studio/augustui"></a>
-  <a href="https://twitter.com/rush_studio"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/rush_studio"></a>
+  <a href="https://twitter.com/_rushstudio"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/_rushstudio"></a>
   <a href="https://github.com/rush-studio/augustui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
   
 </div>
@@ -19,8 +19,8 @@ Visit our [contributing guide](https://github.com/rush-studio/augustui/blob/main
 
 ## Authors
 
-<a href="https://github.com/rush-studio/augustui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rush-studio/augustui" />
+<a href="https://github.com/Rush-Studio/augustui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Rush-Studio/augustui" />
 </a>
 
 ## License

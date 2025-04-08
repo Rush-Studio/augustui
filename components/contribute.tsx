@@ -10,7 +10,7 @@ export function Contribute({ doc }: { doc: Doc }) {
       text: "Report an issue",
       icon: BugIcon,
       href: getGitHubIssueUrl({
-        owner: "augustui",
+        owner: "Rush-Studio",
         repo: "augustui",
         title: `[bug]: ${doc.slug}`,
         labels: ["bug", "documentation"],
@@ -21,7 +21,7 @@ export function Contribute({ doc }: { doc: Doc }) {
       text: "Request a feature",
       icon: LightbulbIcon,
       href: getGitHubIssueUrl({
-        owner: "augustui",
+        owner: "Rush-Studio",
         repo: "augustui",
         title: `[feat]: ${doc.slug}`,
         labels: ["enhancement"],
