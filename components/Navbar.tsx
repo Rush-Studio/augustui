@@ -6,6 +6,7 @@ import { MobileNav } from "./MobileNav";
 import GithubButton from "./github-button";
 import { docsConfig } from "@/config/docs";
 import NavbarLink from "./navbar-link";
+import AugustUI from "./icons/AugustUI";
 
 export function Navbar() {
   return (
@@ -21,7 +22,7 @@ export function Navbar() {
         <div className="flex h-full items-center justify-between">
           <div className="flex w-full justify-between gap-10">
             <Link href="/" className="group hidden items-center gap-2 md:flex">
-              <div className="flex size-[22px] items-center justify-center rounded-md bg-[#E84E36] transition-transform group-hover:scale-110"></div>
+              <AugustUI className="size-6" />
               <span
                 className={cn(
                   josefinSans.className,

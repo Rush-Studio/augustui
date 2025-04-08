@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
   return (
-    <article className="container mx-auto min-h-[calc(100vh-153px)] max-w-[120ch] py-14">
+    <article className="container mx-auto min-h-[calc(100vh-177px)] max-w-[120ch] py-14">
       <h2
         className={cn(
           "mb-2 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground",
