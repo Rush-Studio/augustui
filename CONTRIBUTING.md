@@ -1,8 +1,8 @@
 # Contributing to AugustUI
 
-Thank you for your interest in contributing to AugustUI! We value your support and welcome your contributions. This guide explains the directory structure and provides step-by-step instructions for adding new components to AugustUI.
+Thank you for your interest in contributing to AugustUI. We sincerely appreciate your support and are excited to welcome contributors to the project. This guide outlines the directory structure and provides detailed, step-by-step instructions for adding new components to AugustUI.
 
-Review the [example PR](https://github.com/rush-studio/augustui/pull/12) to understand which files need modification. **Adding a new component or effect requires changes to only 5 files** and typically takes about 10 minutes to complete!
+Review the [example PR](https://github.com/rush-studio/augustui/pull/3) to understand which files need modification. **Adding a new component or effect requires changes to only 5 files** and typically takes about 10 minutes to complete!
 
 When you're finished, open a pull request from your forked repository to the main repository [here](https://github.com/rush-studio/augustui/compare).
 
@@ -10,7 +10,8 @@ When you're finished, open a pull request from your forked repository to the mai
 
 ### Fork and Clone the Repository
 
-1. **Fork this repository**  
+1. **Fork this repository**
+
    Click [here](https://github.com/rush-studio/augustui/fork) to fork the repository.
 
 2. **Clone your forked repository to your local machine**
@@ -25,25 +26,20 @@ When you're finished, open a pull request from your forked repository to the mai
    cd augustui
    ```
 
-4. **Create a new branch for your changes**
-
-   ```bash
-   git checkout -b feat/new-component
-   ```
-
-5. **Install dependencies**
+4. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-6. **Create a `.env.local` file**
+5. **Create a `.env.local` file**
 
    ```bash
    touch .env.local && echo "NEXT_PUBLIC_APP_URL=http://localhost:3000" > .env.local
    ```
 
-7. **Run the project**
+6. **Run the project**
+
    ```bash
    npm run dev
    ```
@@ -52,7 +48,13 @@ When you're finished, open a pull request from your forked repository to the mai
 
 To add a new component to AugustUI, follow these steps:
 
-### 1. Create the Component
+### 1. Create a new branch for your changes
+
+```bash
+git checkout -b feat/new-component
+```
+
+### 2. Create the Component
 
 Create the main component file in `registry/augustui/example-component.tsx`
 
@@ -68,7 +70,7 @@ export default function ExampleComponent() {
 }
 ```
 
-### 2. Create a Component Demo
+### 3. Create a Component Demo
 
 Develop a basic example to showcase your component in `registry/example/example-component-demo.tsx`
 
@@ -84,7 +86,7 @@ export default function ExampleComponentDemo() {
 }
 ```
 
-### 3. Update the Sidebar
+### 4. Update the Sidebar
 
 Add your component to the sidebar navigation in `config/docs.ts`
 
@@ -105,7 +107,7 @@ Check if your component belongs to an existing category in the sidebar navigatio
 }
 ```
 
-### 4. Create Documentation
+### 5. Create Documentation
 
 Create an MDX file to document your component in `content/docs/components/example-component.mdx`
 
@@ -157,7 +159,7 @@ npx shadcn@latest add "https://augustui.com/r/example-component"
 | `color` | `String` | `"blue"` | The color of the component |
 ````
 
-### 5. Update Registry
+### 6. Update Registry
 
 Export your component and example in the registry files (`registry/registry-ui.ts` and `registry/registry-examples.ts`):
 
@@ -205,27 +207,35 @@ export const examples: Registry = [
 
 Make sure to add any necessary dependencies, tailwind configurations, or other properties as needed for your specific component.
 
-### 6. Build registry
+### 7. Build registry
 
 ```bash
 npm run build:registry
 ```
 
-### 7. Format and fix linting before committing
+### 8. Run the dev environment (if it wasn't already) to check your component
 
 ```bash
-npm run format:write
+npm run dev
 ```
+
+### 9. Commit your changes
 
 ```bash
-npm run lint:fix
+git add .
+git commit -m "feat: add example-component"
+git push origin feat/new-component
 ```
-
-Make sure to run these two commands before committing your changes.
 
 ## Adding to the Showcase
 
-### 1. Create a Showcase MDX File
+### 1. Create a new branch for your changes
+
+```bash
+git checkout -b showcase/showcase-website
+```
+
+### 2. Create a Showcase MDX File
 
 Create your showcase entry in `content/showcase/example-website.mdx`
 
@@ -240,7 +250,7 @@ affiliation: YC S21, raised $5M
 ---
 ```
 
-### 2. Create an image
+### 3. Create an image
 
 Upload an image of your site to `public/showcase/example-website.png`
 
