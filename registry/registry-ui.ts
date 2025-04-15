@@ -289,6 +289,20 @@ const ui: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "slide-deck",
+    type: "registry:ui",
+    title: "Slide Deck",
+    description: "A slide deck component that displays a list of images.",
+    dependencies: ["react", "motion"],
+    files: [
+      {
+        path: "registry/augustui/slide-deck.tsx",
+        type: "registry:ui",
+        target: "components/augustui/slide-deck.tsx",
+      },
+    ],
+  },
 ];
 
 export { ui };

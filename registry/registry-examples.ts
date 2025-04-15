@@ -298,6 +298,21 @@ const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "slide-deck-demo",
+    type: "registry:example",
+    title: "Slide Deck Demo",
+    description:
+      "Example showing a slide deck component that displays a list of images.",
+    registryDependencies: ["https://augustui.com/r/slide-deck"],
+    files: [
+      {
+        path: "registry/example/slide-deck-demo.tsx",
+        type: "registry:example",
+        target: "components/slide-deck-demo.tsx",
+      },
+    ],
+  },
 ];
 
 export { examples };
