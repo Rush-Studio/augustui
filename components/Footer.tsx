@@ -50,7 +50,7 @@ export function Footer() {
           <p className="text-muted-foreground">
             A{" "}
             <Link
-              href="https://rushstudio.co"
+              href="https://rushstudio.xyz"
               className="text-primary hover:underline"
             >
               Rush Studio
