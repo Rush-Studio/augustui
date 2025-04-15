@@ -483,6 +483,29 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
+  "slide-deck": {
+    name: "slide-deck",
+    description: "A slide deck component that displays a list of images.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/augustui/slide-deck.tsx",
+        type: "registry:ui",
+        target: "components/augustui/slide-deck.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/augustui/slide-deck.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    meta: undefined,
+  },
   "typing-animation-demo": {
     name: "typing-animation-demo",
     description:
@@ -955,6 +978,30 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/velvet-view-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    meta: undefined,
+  },
+  "slide-deck-demo": {
+    name: "slide-deck-demo",
+    description:
+      "Example showing a slide deck component that displays a list of images.",
+    type: "registry:example",
+    registryDependencies: ["https://augustui.com/r/slide-deck"],
+    files: [
+      {
+        path: "registry/example/slide-deck-demo.tsx",
+        type: "registry:example",
+        target: "components/slide-deck-demo.tsx",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/slide-deck-demo.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>

@@ -361,6 +361,23 @@
       ]
     },
     {
+      "name": "slide-deck",
+      "type": "registry:ui",
+      "title": "Slide Deck",
+      "description": "A slide deck component that displays a list of images.",
+      "dependencies": [
+        "react",
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/augustui/slide-deck.tsx",
+          "type": "registry:ui",
+          "target": "components/augustui/slide-deck.tsx"
+        }
+      ]
+    },
+    {
       "name": "typing-animation-demo",
       "type": "registry:example",
       "title": "Typing Animation Demo",
@@ -677,6 +694,22 @@
           "path": "registry/example/velvet-view-demo.tsx",
           "type": "registry:example",
           "target": "components/velvet-view-demo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slide-deck-demo",
+      "type": "registry:example",
+      "title": "Slide Deck Demo",
+      "description": "Example showing a slide deck component that displays a list of images.",
+      "registryDependencies": [
+        "https://augustui.com/r/slide-deck"
+      ],
+      "files": [
+        {
+          "path": "registry/example/slide-deck-demo.tsx",
+          "type": "registry:example",
+          "target": "components/slide-deck-demo.tsx"
         }
       ]
     },

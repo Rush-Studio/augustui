@@ -240,6 +240,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "",
         },
+        {
+          title: "Slide Deck",
+          href: `/docs/components/slide-deck`,
+          items: [],
+          label: "New",
+        },
       ],
     },
   ],
